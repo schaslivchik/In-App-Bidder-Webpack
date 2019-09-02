@@ -1,0 +1,144 @@
+.lane__item-fixed {
+    position: relative;
+    width: 100%;
+    z-index: 99999;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(148,151,165,0.55);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(148,151,165,0.55);
+    box-shadow: 0px 0px 25px 0px rgba(148,151,165,0.55);
+    transition: .2s;
+    transition-timing-function: cubic-bezier(0, 0, 0, 1);
+    border-radius: 4px;
+    .header-block {
+      position: relative;
+      text-transform: uppercase;
+      background-color: $primary_color;
+      color: $white_color;
+      .header-block__lane {
+        position: relative;
+        font-size: 21px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        z-index: 1;
+      }
+      .header-block__name {
+        position: relative;
+        text-transform: uppercase;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; 
+        z-index: 1;
+      }
+      .header-block__lane-name {
+        position: absolute;
+        right: 5px;
+        height: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        font-size: 48px;
+        color: #78a356;
+        font-weight: 500;
+        z-index: 0;
+        text-transform: uppercase;
+      }
+    }
+    .lights-vir {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media all and (max-width: 425px) {
+        flex-wrap: wrap;
+      }
+      .lights-vir__lights {
+        display: flex;
+        flex-wrap: wrap;
+        @media all and (max-width: 425px) {
+            width: 100%;
+        }
+        & span {
+          display: block;
+          width: 16px;
+          height: 16px;
+          border-radius: 100%;
+          margin: 2px;
+        }
+        .lights-vir__lights--green {
+          background: $primary_color;
+          border: 1px solid #82b15d;
+        }
+        .lights-vir__lights--orange {
+          background: $orange_color;
+          border: 1px solid #ed853b;
+        }
+        .lights-vir__lights--grey {
+          background: $grey_color;
+          border: 1px solid #5c6575;
+        }
+        .lights-vir__lights--blue {
+          background: $blue_color;
+          border: 1px solid #3177b4;
+        }
+       
+      }
+      .ligths-vir__vir {
+        @media all and (max-width: 425px) {
+            margin-top: 6px;
+            width: 100%;
+        }
+        .vir__condition {
+          padding: 6px 8px;
+          border-radius: 3px;
+          color: #fff;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+    .odometer__status {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+        &--bad-condition {
+          background-image: url('../images/odometer_bad_condition.svg');
+        }
+        &--good-condition {
+          background-image: url('../images/odometer_good_condition.svg');
+        }
+        &--icon {
+          width: 26px;
+          height: 26px;
+          display: block;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        &--value{
+          font-size: 18px;
+          margin-left: 10px;
+          @media all and (max-width: 325px) {
+            font-size: 16px;
+          }
+        }
+    }
+    .bidding {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+        &__status {
+          width: 26px;
+          height: 26px;
+          display: block;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url('../images/bid_status.svg')
+        }
+        &__value {
+          font-size: 18px;
+          margin-left: 10px;
+          @media all and (max-width: 325px) {
+            font-size: 16px;
+          }
+        }
+    }
+  }
