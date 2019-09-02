@@ -1,3 +1,65 @@
 .lane__items-dynamic {
     margin-top: 20px;
+    .dynamic-block__title {
+        text-transform: uppercase;
+        &_name-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            &--name {
+                font-weight: 500;
+            }
+            &--time {
+                color: $primary_color;
+                font-weight: 500;
+            }
+        }
+        &_name-vehicle {
+            font-weight: 500;
+            position: relative;
+            text-transform: uppercase;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+    .dynamic-block__footer {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        @media all and (max-width: 575px) {
+            flex-wrap: wrap;
+        }
+        &_image {
+            min-height: 60px;
+            width: 80px;
+            border-radius: 0 0 0 4px;
+            background-color: $grey_color;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media all and (max-width: 575px) {
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+        &_info {
+            padding: 5px;
+            &--odometer {
+                display: flex;
+                align-items: center;
+                margin-bottom: 5px;
+                font-weight: 500;
+                &-value {
+                    margin-left: 5px;
+                }
+            }
+            &--proxy {
+                color: $primary_color;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+        }
+    }
   }

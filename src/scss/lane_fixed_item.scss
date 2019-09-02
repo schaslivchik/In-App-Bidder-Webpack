@@ -42,58 +42,6 @@
         text-transform: uppercase;
       }
     }
-    .lights-vir {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      @media all and (max-width: 425px) {
-        flex-wrap: wrap;
-      }
-      .lights-vir__lights {
-        display: flex;
-        flex-wrap: wrap;
-        @media all and (max-width: 425px) {
-            width: 100%;
-        }
-        & span {
-          display: block;
-          width: 16px;
-          height: 16px;
-          border-radius: 100%;
-          margin: 2px;
-        }
-        .lights-vir__lights--green {
-          background: $primary_color;
-          border: 1px solid #82b15d;
-        }
-        .lights-vir__lights--orange {
-          background: $orange_color;
-          border: 1px solid #ed853b;
-        }
-        .lights-vir__lights--grey {
-          background: $grey_color;
-          border: 1px solid #5c6575;
-        }
-        .lights-vir__lights--blue {
-          background: $blue_color;
-          border: 1px solid #3177b4;
-        }
-       
-      }
-      .ligths-vir__vir {
-        @media all and (max-width: 425px) {
-            margin-top: 6px;
-            width: 100%;
-        }
-        .vir__condition {
-          padding: 6px 8px;
-          border-radius: 3px;
-          color: #fff;
-          display: block;
-          text-align: center;
-        }
-      }
-    }
     .odometer__status {
       display: flex;
       align-items: center;

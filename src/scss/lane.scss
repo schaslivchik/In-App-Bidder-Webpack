@@ -17,4 +17,18 @@
       }
     }
   }
+  .odometer-ico {
+    width: 18px;
+    height: 18px;
+    display: block;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .odometer__status--bad-condition {
+    background-image: url('../images/odometer_bad_condition.svg');
+  }
+  .odometer__status--good-condition {
+    background-image: url('../images/odometer_good_condition.svg');
+  }
   
