@@ -70,9 +70,6 @@ const config = {
                     }
                   ]
                 }),
-                require('autoprefixer')({
-                  'browsers': ['> 1%', 'last 2 versions']
-                }),
               ]
             }
           },
@@ -101,17 +98,9 @@ const config = {
         to: "./fonts"
       },
       {
-        from: "./src/favicon",
-        to: "./favicon"
-      },
-      {
         from: "./src/images",
         to: "./images"
       },
-      {
-        from: "./src/uploads",
-        to: "./uploads"
-      }
     ]),
   ].concat(htmlPlugins)
 };
