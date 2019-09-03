@@ -11,3 +11,9 @@ const laneScroll = document.querySelectorAll('.lane__item');
     })
 );
 
+// let listGroup = document.querySelectorAll('.list-group');
+
+// listGroup[1].addEventListener('click', (e) => {
+//     e.preventDefault()
+//     console.log(e)
+// })

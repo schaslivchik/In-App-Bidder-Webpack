@@ -84,7 +84,6 @@
     }
   }
 }
-
 .lights-vir-bell {
   @media all and (max-width: 575px) {
     flex-wrap: wrap;
@@ -103,15 +102,14 @@
     }
   }
 }
-
 .condition__new {
   background-color: #5fbcd3;
   border: 1px solid #53a8bd;
 }
 .condition__exelent {
-    background-color: #80e93a;
-    border: 1px solid #71d231;
-  }
+  background-color: #80e93a;
+  border: 1px solid #71d231;
+}
 .condition__good {
   background-color: #bcd35f;
   border: 1px solid #b2cc4b;

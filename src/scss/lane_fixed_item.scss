@@ -2,12 +2,14 @@
     position: relative;
     width: 100%;
     z-index: 99999;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(148,151,165,0.55);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(148,151,165,0.55);
-    box-shadow: 0px 0px 25px 0px rgba(148,151,165,0.55);
+    -webkit-box-shadow: 0px 15px 25px 0px rgba(148,151,165,0.55);
+    -moz-box-shadow: 0px 15px 25px 0px rgba(148,151,165,0.55);
+    box-shadow: 0px 15px 25px 0px rgba(148,151,165,0.55);
     transition: .2s;
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
     border-radius: 4px;
+    
+    
     .header-block {
       position: relative;
       text-transform: uppercase;
