@@ -7,6 +7,7 @@
     flex-wrap: wrap;
   }
   .lights-vir__lights {
+    margin: 3px 0;
     display: flex;
     flex-wrap: wrap;
     @media all and (max-width: 425px) {
@@ -38,6 +39,7 @@
    
   }
   .ligths-vir__vir {
+    margin: 3px 0;
     @media all and (max-width: 425px) {
         margin-top: 6px;
         width: 100%;
@@ -48,24 +50,56 @@
       color: #fff;
       display: block;
       text-align: center;
+      min-width: 54px;
     }
   }
   .lights-vir__bell-star {
+    margin: 3px 0;
     display: flex;
+    margin-left: auto;
+
+    @media all and (max-width: 425px){
+      margin-left: 0;
+    }
     & span {
-      width: 16px;
-      height: 16px;
+      width: 18px;
+      height: 18px;
       display: block;
       margin-right: 5px;
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: contain;
     }
+    .lights-vir__bell-active {
+      background-image: url('../images/filled_bell.svg'); 
+    }
     .lights-vir__bell-unactive {
-      background-image: url('../images/outline_star.svg'); 
+      background-image: url('../images/outline_bell.svg'); 
     }
     .lights-vir__star-active {
       background-image: url('../images/filled_star.svg'); 
+    }
+    .lights-vir__star-unactive {
+      background-image: url('../images/outline_star.svg'); 
+    }
+  }
+}
+
+.lights-vir-bell {
+  @media all and (max-width: 575px) {
+    flex-wrap: wrap;
+  }
+  .ligths-vir__vir {
+    display: flex;
+    justify-content: flex-end;
+    .vir__condition {
+      width: 54px;
+      @media all and (max-width: 425px) {
+        width: 100%;
+      }
+    }
+    @media all and (max-width: 525px){
+      width: 100%;
     }
   }
 }
