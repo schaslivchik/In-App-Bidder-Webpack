@@ -8,9 +8,10 @@
 @import 'lane_fixed_item';
 @import 'lane_dynamic_item';
 @import 'settings_btn';
-@import 'popup_dynamic_block';
+@import 'popup_block';
 
 body {
+  -webkit-appearance: initial;
   -webkit-overflow-scrolling: touch;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;

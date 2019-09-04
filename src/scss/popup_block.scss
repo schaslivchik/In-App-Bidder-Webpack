@@ -1,0 +1,175 @@
+.popup_block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 9999999;
+    // border-radius: 6px;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.15);
+    .popup__bid-proxy {
+        background:none;
+        height: 100%;
+        .list-group-item {
+            padding: 10px 15px;
+            background: none;
+        }
+        .lights-vir {
+            &__lights {
+                & span {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 15px;
+                }
+            }
+            &__bell-star {
+                & span {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 15px;
+                }
+            }
+        }
+        &_title {
+            text-transform: uppercase;
+            font-weight: 500;
+            &--lane {
+                font-size: 21px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            &--name {
+                font-size: 14px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+        &_announcements {
+            display: flex;
+            align-items: center;
+            &--title {
+                font-size: 14px;
+                font-weight: 500;
+                margin-right: 10px;
+            }
+            &--description {
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                font-size: 14px;
+            }
+        }
+        .popup__bid-proxy_info {
+            padding: 0;
+            .inner-info {
+                display: flex;
+                align-items: center;
+                text-transform: uppercase;
+                font-size: 14px;
+                padding: 10px 15px;
+                font-weight: 500;
+                &:nth-child(odd) {
+                    background: #e4e8ec6b;
+                }
+                &__name {
+                    min-width: 100px;
+                    text-align: right;
+                    margin-right: 15px;
+                }
+                &__value {
+                    text-transform: uppercase;
+                    &--select {
+                        text-transform: uppercase;
+                        border: none;
+                        background: none;
+                        color: $text_color;
+                        font-weight: 500;
+                        width: 100%;
+                    }
+                }
+                &__auction-status {
+                    margin-left: auto;
+                    font-size: 10px;
+                    color: $btn_red;
+                }
+            }
+            
+        }
+        .popup__bid-proxy_bid-info {
+            padding: 0;
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+            &--online-bid {
+                font-size: 14px;
+                padding: 10px 0 0 15px;
+                width: 50%;
+                border-right: 1px solid rgba(0,0,0,.25);
+                overflow: scroll;
+                & .online-bid__item:first-child {
+                    color: $primary_color;
+                    font-weight: 600;
+                }
+                & .online-bid__item:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+            &--vehicle-info {
+                width: 50%;
+                
+                .vehicle-info__item {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    padding: 10px 15px;
+                    overflow: scroll;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    &:nth-child(odd) {
+                        background: rgba(228,232,236,.4);
+                    }
+                    & b {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .close__popup {
+        background: $btn_red;
+        color: $white_color;
+        padding: 6px 16px;
+        border:1px solid #c54242;
+        border-radius: $btn_radius;
+        -webkit-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
+        -moz-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
+        box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
+        transition: .3s;
+        cursor: pointer;
+        &:hover {
+        transform: translateY(-3px);
+        -webkit-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.5);
+        -moz-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.5);
+        box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.5);
+        }
+    }
+    
+}
+
+.close {
+    display: none;
+}
+.wrap__btn--close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
