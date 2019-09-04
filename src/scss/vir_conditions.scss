@@ -3,22 +3,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media all and (max-width: 425px) {
+  @media all and (max-width: 374px) {
     flex-wrap: wrap;
   }
   .lights-vir__lights {
     margin: 3px 0;
     display: flex;
     flex-wrap: wrap;
+   
     @media all and (max-width: 425px) {
-        width: 100%;
+      margin: 2px 0;
     }
     & span {
       display: block;
-      width: 16px;
-      height: 16px;
+      width: 10px;
+      height: 10px;
       border-radius: 100%;
       margin: 2px;
+      &:first-child {
+        margin-left: 0;
+      }
+      @media all and (max-width: 425px) {
+        width: 8px;
+        height: 8px;
+      }
     }
     .lights-vir__lights--green {
       background: $primary_color;
@@ -40,35 +48,31 @@
   }
   .ligths-vir__vir {
     margin: 3px 0;
-    @media all and (max-width: 425px) {
-        margin-top: 6px;
-        width: 100%;
-    }
     .vir__condition {
       padding: 6px 8px;
       border-radius: 3px;
       color: #fff;
       display: block;
       text-align: center;
-      min-width: 54px;
+      min-width: 36px;
     }
   }
   .lights-vir__bell-star {
     margin: 3px 0;
     display: flex;
     margin-left: auto;
-
-    @media all and (max-width: 425px){
-      margin-left: 0;
-    }
     & span {
-      width: 18px;
-      height: 18px;
+      width: 14px;
+      height: 14px;
       display: block;
       margin-right: 5px;
       background-position: 50%;
       background-repeat: no-repeat;
       background-size: contain;
+      @media all and (max-width: 425px) {
+        width: 10px;
+        height: 10px;
+      }
     }
     .lights-vir__bell-active {
       background-image: url('../images/filled_bell.svg'); 
@@ -85,20 +89,16 @@
   }
 }
 .lights-vir-bell {
-  @media all and (max-width: 575px) {
-    flex-wrap: wrap;
-  }
   .ligths-vir__vir {
     display: flex;
     justify-content: flex-end;
+    @media all and (max-width: 374px) {
+      width: 100%;
+    }
     .vir__condition {
-      width: 54px;
-      @media all and (max-width: 425px) {
+      @media all and (max-width: 374px) {
         width: 100%;
       }
-    }
-    @media all and (max-width: 525px){
-      width: 100%;
     }
   }
 }

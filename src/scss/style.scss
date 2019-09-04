@@ -8,11 +8,12 @@
 @import 'lane_fixed_item';
 @import 'lane_dynamic_item';
 @import 'settings_btn';
+@import 'popup_dynamic_block';
 
 body {
   -webkit-overflow-scrolling: touch;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: $text_color;
 }
 

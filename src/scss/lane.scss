@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: nowrap;
     overflow: scroll;
-    height: calc(100vh - 10px);
+    height: 100vh;
     scroll-behavior: smooth;
     .lane__item {
       position: relative;
@@ -45,7 +45,7 @@
   margin-bottom: -1px;
   background-color: #fff;
   border: 1px solid rgba(0,0,0,.125);
-  padding: 10px 5px;
+  padding: 6px;
   &:first-child {
     border-radius: $radius_blocks $radius_blocks 0 0;
   }

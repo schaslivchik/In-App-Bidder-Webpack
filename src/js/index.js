@@ -11,9 +11,9 @@ const laneScroll = document.querySelectorAll('.lane__item');
     })
 );
 
-// let listGroup = document.querySelectorAll('.list-group');
+let listGroup = document.querySelectorAll('.list-group');
 
-// listGroup[1].addEventListener('click', (e) => {
-//     e.preventDefault()
-//     console.log(e)
+// listGroup[1].addEventListener('click', () => {
+//     let div = document.createElement('div')
+//     document.querySelector('body').appendChild(div).classList.add('popup')
 // })

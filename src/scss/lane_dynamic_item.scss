@@ -28,20 +28,20 @@
         display: flex;
         padding: 0;
         align-items: center;
-        @media all and (max-width: 575px) {
-            flex-wrap: wrap;
-        }
+        // @media all and (max-width: 575px) {
+        //     flex-wrap: wrap;
+        // }
         &_image {
-            min-height: 80px;
-            width: 110px;
+            min-height: 50px;
+            width: 80px;
             border-radius: 0 0 0 $radius_blocks;
             background-color: $grey_color;
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
-            @media all and (max-width: 575px) {
-                width: 100%;
-                border-radius: 0;
+            @media all and (max-width: 450px) {
+                min-height: 44px;
+                width: 44px;
             }
         }
         &_info {

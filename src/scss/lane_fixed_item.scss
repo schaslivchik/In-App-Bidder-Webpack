@@ -55,19 +55,16 @@
           background-image: url('../images/odometer_good_condition.svg');
         }
         &--icon {
-          width: 26px;
-          height: 26px;
+          width: 22px;
+          height: 22px;
           display: block;
           background-position: center center;
           background-repeat: no-repeat;
           background-size: contain;
         }
         &--value{
-          font-size: 18px;
+          font-size: 16px;
           margin-left: 10px;
-          @media all and (max-width: 325px) {
-            font-size: 16px;
-          }
         }
     }
     .bidding {
@@ -75,8 +72,8 @@
       align-items: center;
       justify-content: flex-start;
         &__status {
-          width: 26px;
-          height: 26px;
+          width: 22px;
+          height: 22px;
           display: block;
           background-position: center center;
           background-repeat: no-repeat;
@@ -84,11 +81,8 @@
           background-image: url('../images/bid_status.svg')
         }
         &__value {
-          font-size: 18px;
+          font-size: 16px;
           margin-left: 10px;
-          @media all and (max-width: 325px) {
-            font-size: 16px;
-          }
         }
     }
   }

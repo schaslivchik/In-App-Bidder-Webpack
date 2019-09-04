@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const webpack = require('webpack');
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -83,7 +84,7 @@ const config = {
       },
       {
         test: /\.html$/,
-        include: path.resolve(__dirname, "src/html/includes"),
+        include: path.resolve(__dirname, "src/html"),
         use: ["raw-loader"]
       }
     ]
