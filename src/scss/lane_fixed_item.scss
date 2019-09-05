@@ -1,15 +1,23 @@
 .lane__item-fixed {
-    position: relative;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
     width: 100%;
     z-index: 99999;
     -webkit-box-shadow: 0px 15px 25px 0px rgba(148,151,165,0.55);
     -moz-box-shadow: 0px 15px 25px 0px rgba(148,151,165,0.55);
     box-shadow: 0px 15px 25px 0px rgba(148,151,165,0.55);
-    transition: .2s;
     transition-timing-function: cubic-bezier(0, 0, 0, 1);
     border-radius: 4px;
-    
-    
+    &:before {
+      content: '';
+      height: 20px;
+      width: 100%;
+      position: absolute;
+      top: -20px;
+      background: $white_color;
+      
+    }
     .header-block {
       position: relative;
       text-transform: uppercase;

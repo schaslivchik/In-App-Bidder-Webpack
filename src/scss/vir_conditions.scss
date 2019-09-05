@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media all and (max-width: 374px) {
+  @media all and (max-width: 360px) {
     flex-wrap: wrap;
   }
   .lights-vir__lights {
@@ -24,8 +24,8 @@
         margin-left: 0;
       }
       @media all and (max-width: 425px) {
-        width: 8px;
-        height: 8px;
+        width: 6px;
+        height: 6px;
       }
     }
     .lights-vir__lights--green {
@@ -92,16 +92,18 @@
   .ligths-vir__vir {
     display: flex;
     justify-content: flex-end;
-    @media all and (max-width: 374px) {
+    @media all and (max-width: 359px) {
       width: 100%;
     }
     .vir__condition {
-      @media all and (max-width: 374px) {
+      @media all and (max-width: 359px) {
         width: 100%;
       }
     }
   }
 }
+
+
 .condition__new {
   background-color: #5fbcd3;
   border: 1px solid #53a8bd;

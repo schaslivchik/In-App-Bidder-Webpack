@@ -141,6 +141,19 @@
                 }
             }
         }
+        &_bidding {
+            min-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            .circle-bidding {
+                height: 70px;
+                width: 70px;
+                background-color: $primary_color;
+                border-radius: 100%;
+            }
+        }
     }
     
 
@@ -173,3 +186,6 @@
     align-items: center;
     justify-content: center;
 }
+
+
+
