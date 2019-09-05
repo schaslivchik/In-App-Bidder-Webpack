@@ -3,12 +3,12 @@
     flex-wrap: nowrap;
     overflow: scroll;
     height: 100vh;
-    scroll-behavior: smooth;
-    .lane__item {
+    .lane__item { 
       position: relative;
       min-width: 42%;
       padding: 10px 10px 0;
       overflow: auto;
+      padding-bottom: calc(100vh - 180px);
       &:first-child {
         padding-left: 10px;
       }

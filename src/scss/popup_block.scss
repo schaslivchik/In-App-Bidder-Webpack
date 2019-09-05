@@ -110,17 +110,20 @@
             overflow: hidden;
             &--online-bid {
                 font-size: 14px;
-                padding: 10px 0 0 15px;
                 width: 50%;
                 border-right: 1px solid rgba(0,0,0,.25);
                 overflow: scroll;
-                & .online-bid__item:first-child {
-                    color: $primary_color;
-                    font-weight: 600;
+                .inner-wrap__bid-info {
+                    padding: 10px 15px;
+                    & .online-bid__item {
+                        margin-bottom: 15px;
+                    }
+                    & .online-bid__item:first-child {
+                        color: $primary_color;
+                        font-weight: 600;
+                    }
                 }
-                & .online-bid__item:not(:last-child) {
-                    margin-bottom: 10px;
-                }
+               
             }
             &--vehicle-info {
                 width: 50%;
@@ -142,16 +145,127 @@
             }
         }
         &_bidding {
+            position: relative;
             min-height: 80px;
             display: flex;
             justify-content: center;
             align-items: center;
             overflow: hidden;
             .circle-bidding {
-                height: 70px;
-                width: 70px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 72px;
+                width: 72px;
                 background-color: $primary_color;
+                border: 1px solid #76ab4c;
                 border-radius: 100%;
+                z-index: 10;
+                &:before {
+                    content: " ";
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50px;
+                    background: $primary_color;
+                    margin: 0 auto 10px auto;
+                    position: absolute;
+                    z-index: -1;
+                    animation: move 2.5s linear 10000 normal
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    background: url('../images/white_bid_ico.svg') center center no-repeat;
+                    width: 36px;
+                    height: 36px;
+                }
+                & img {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
+            .line-bidding {
+                display: flex;
+                position: absolute;
+                width: 50%;
+                max-width: 220px;
+                height: 28px;
+                z-index: 1;
+                border-radius: 40px;
+                &__proxy {
+                    position: relative;
+                    background: $grey_color;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 40px 0 0 40px;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        background: url('../images/arrows.svg') no-repeat center center;
+                        background-size: contain;
+                        width: 52px;
+                        height: 10px;
+                        display: block;
+                        top:0;
+                        bottom: 0;
+                        right: 0;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        margin-right: 30px;
+                        opacity: 0.8;
+                    }
+                }
+                &__bid-up {
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                    background: $grey_color;
+                    border-radius: 0 40px 40px 0;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        background: url('../images/arrows.svg') no-repeat center center;
+                        background-size: contain;
+                        width: 52px;
+                        height: 10px;
+                        display: block;
+                        top:0;
+                        bottom: 0;
+                        left: 0;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        margin-left: 30px;
+                        opacity: 0.8;
+                        transform: rotate(180deg);
+                    }
+                    
+                }
+                &__bid-up.disable__bid-up-block{
+                    opacity: .3;
+                }
+            }
+            .value-proxy_bidding {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                position: absolute;
+                &__proxy {
+                    width: 100%;
+                    max-width: 80px;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: 500;
+                }
+                &__bid-up {
+                    width: 100%;
+                    max-width: 90px;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: 500;
+                }
             }
         }
     }
@@ -189,3 +303,8 @@
 
 
 
+@keyframes move{
+    0% {transform:scale(0.5);opacity:0}
+    75%{transform:scale(1.5);opacity:0.7}
+    100%{transform:scale(2);opacity:0}
+}

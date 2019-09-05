@@ -634,7 +634,7 @@
             <img class="settings-btn__icon" src="../images/settings_icon.svg" alt="setting_icon">
         </div>
     </div>
-    <div class="popup_block close">
+    <div class="popup_block">
         <ul class="list-group popup__bid-proxy">
             <li class="list-group-item popup__bid-proxy_title">
                 <p class="popup__bid-proxy_title--lane">A-001x</p>  
@@ -677,19 +677,34 @@
                     <p class="inner-info__auction-status auction-status__inactive">auction is inactive</p>
                 </div>
             </li>
-            <li class="list-group-item popup__bid-proxy_bidding" id="swipezone">
-                <div class="circle-bidding">
-
+            <li class="list-group-item popup__bid-proxy_bidding" id="swipezone" >
+                <div class="circle-bidding"></div>
+                <div class="line-bidding">
+                    <div class="line-bidding__proxy"></div>
+                    <div class="line-bidding__bid-up disable__bid-up-block"></div>
+                </div>
+                <div class="value-proxy_bidding">
+                    <div class="value-proxy_bidding__proxy">
+                        <div class="value-proxy_bidding__proxy_value">set Proxy</div>
+                     </div>
+                    <div class="value-proxy_bidding__bid-up">
+                       <div calss="value-proxy_bidding__bid-up_value">
+                            <p>bid up</p>
+                            <p class="value-proxy_bidding__bid-up_value--bid">-</p>
+                        </div> 
+                    </div>
                 </div>
             </li>
             <li class="list-group-item popup__bid-proxy_bid-info">
                 <div class="popup__bid-proxy_bid-info--online-bid">
-                    <p class="online-bid__item">Online: $8,700</p>
-                    <p class="online-bid__item">Online: $8,675</p>
-                    <p class="online-bid__item">In lane: $8,525</p>
-                    <p class="online-bid__item">Online: $8,500</p>
-                    <p class="online-bid__item">In lane: $8,475</p>
-                    <p class="online-bid__item">Online: $8,350</p>
+                    <div class="inner-wrap__bid-info">
+                        <p class="online-bid__item">Online: $8,700</p>
+                        <p class="online-bid__item">Online: $8,675</p>
+                        <p class="online-bid__item">In lane: $8,525</p>
+                        <p class="online-bid__item">Online: $8,500</p>
+                        <p class="online-bid__item">In lane: $8,475</p>
+                        <p class="online-bid__item">Online: $8,350</p>
+                    </div>
                  </div>
                 <div class="popup__bid-proxy_bid-info--vehicle-info">
                     <p class="vehicle-info__item">
