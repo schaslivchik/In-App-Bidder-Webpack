@@ -1,4 +1,10 @@
 let swipeZone = document.getElementById('swipezone');
+let canselProxyBid = document.querySelector('.cancel__proxy-bid');
+let proxyBid = document.querySelector('.proxy-bid-area');
+
+canselProxyBid.addEventListener('click', () => {
+  proxyBid.classList.remove('active')
+})
 
 
 var touchStartCoords =  {'x':-1, 'y':-1}, // X and Y coordinates on mousedown or touchstart events.
@@ -34,10 +40,12 @@ function swipeEnd(e) {
       direction = (touchEndCoords.x < 0)? 'left' : 'right';
       switch(direction){
         case 'left':
-          alert("Left swipe detected");
+          console.log("Left swipe detected");
+         
+          proxyBid.classList.add('active');
           break;
         case 'right':
-          alert("Right swipe detected");
+          console.log("Right swipe detected");
           break;
       }
     }
@@ -54,4 +62,5 @@ function addMultipleListeners(el, s, fn) {
 addMultipleListeners(targetElement, 'mousedown touchstart', swipeStart);
 addMultipleListeners(targetElement, 'mousemove touchmove', swipeMove);
 addMultipleListeners(targetElement, 'mouseup touchend', swipeEnd);
+
 

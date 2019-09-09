@@ -1,37 +1,35 @@
 .popup_block {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.65);
     z-index: 9999999;
-    // border-radius: 6px;
     -webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.15);
     -moz-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.15);
     box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.15);
     .popup__bid-proxy {
-        background:none;
-        height: 100%;
+        background: none;
+        max-width: 360px;
         .list-group-item {
             padding: 10px 15px;
-            background: none;
+            max-height: 100%;
         }
         .lights-vir {
             &__lights {
                 & span {
-                    width: 18px;
-                    height: 18px;
+                    width: 26px;
+                    height: 26px;
                     margin-right: 15px;
                 }
             }
             &__bell-star {
                 & span {
-                    width: 18px;
-                    height: 18px;
+                    width: 26px;
+                    height: 26px;
                     margin-right: 15px;
                 }
             }
@@ -108,6 +106,7 @@
             display: flex;
             height: 100%;
             overflow: hidden;
+            flex-grow: 1;
             &--online-bid {
                 font-size: 14px;
                 width: 50%;
@@ -116,11 +115,14 @@
                 .inner-wrap__bid-info {
                     padding: 10px 15px;
                     & .online-bid__item {
-                        margin-bottom: 15px;
+                        margin-bottom: 8px;
                     }
                     & .online-bid__item:first-child {
                         color: $primary_color;
                         font-weight: 600;
+                    }
+                    & .online-bid__item:last-child {
+                        margin-bottom: 0;
                     }
                 }
                
@@ -131,8 +133,8 @@
                 .vehicle-info__item {
                     font-size: 14px;
                     text-transform: uppercase;
-                    padding: 10px 15px;
-                    overflow: scroll;
+                    padding: 8px 15px;
+                    overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     &:nth-child(odd) {
@@ -171,8 +173,14 @@
                     margin: 0 auto 10px auto;
                     position: absolute;
                     z-index: -1;
-                    animation: move 2.5s linear 10000 normal
+                    animation: move 1.5s linear 10000 normal
                 }
+                @keyframes move{
+                    0% {transform:scale(0.5);opacity:0}
+                    75%{transform:scale(1.5);opacity:0.7}
+                    100%{transform:scale(2);opacity:0}
+                }
+
                 &:after {
                     content: '';
                     position: absolute;
@@ -191,7 +199,7 @@
                 width: 50%;
                 max-width: 220px;
                 height: 28px;
-                z-index: 1;
+                // z-index: -1;
                 border-radius: 40px;
                 &__proxy {
                     position: relative;
@@ -266,45 +274,135 @@
                     text-align: center;
                     font-weight: 500;
                 }
+                &__bid-up.disable__bid-up-block{
+                    opacity: .3;
+                }
+            }
+            .proxy-bid-area {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                height: 100%;
+                width: 0;
+                background: $white_color;
+                opacity: 0;
+                transition: .3s;
+                right:0;
+                z-index: 15;
+                &.active {
+                    z-index: 10;
+                    opacity: 1;
+                    width: 100%;
+                    right: 0;
+                }
+                .inner-wrap__proxy-bid {
+                    padding: 15px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    max-width: 220px;
+                    .broxy-bid__btn-group {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
             }
         }
     }
-    
-
-    .close__popup {
-        background: $btn_red;
-        color: $white_color;
-        padding: 6px 16px;
-        border:1px solid #c54242;
-        border-radius: $btn_radius;
-        -webkit-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
-        -moz-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
-        box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
-        transition: .3s;
-        cursor: pointer;
-        &:hover {
-        transform: translateY(-3px);
-        -webkit-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.5);
-        -moz-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.5);
-        box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.5);
-        }
-    }
-    
 }
 
 .close {
     display: none;
 }
-.wrap__btn--close {
+
+#close_section {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    min-height: 50px;
+    // margin-top: auto;
+    // margin-bottom: auto;
+    // border: none;
 }
 
 
 
-@keyframes move{
-    0% {transform:scale(0.5);opacity:0}
-    75%{transform:scale(1.5);opacity:0.7}
-    100%{transform:scale(2);opacity:0}
+
+.input_area {
+    display: flex;
+    width: 100%;
+    align-items:center;
+    position: relative;
+    margin-bottom: 10px;
+    height: 30px;
+}
+[data-input="input-btn"] {
+    position: relative;
+    border-radius: $btn_radius 0 0 $btn_radius;
+    -webkit-border: none;
+    border: none;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,.125);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,.125);
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,.125);
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 100%;
+    min-height: 30px;
+}
+
+#swipezone {
+    padding: 0;
+    min-height: 108px;
+}
+
+.btn {
+    color: $white_color;
+    height: 30px;
+    border-radius: $btn_radius;
+    transition: .3s;
+    cursor: pointer;
+    border: none;
+    background: $grey_color;
+    max-width: 104px;
+    width: 100%;
+    &:focus {
+        outline: none;
+    }
+    &.btn-input {
+        width: 60px;
+        border-radius: 0 $btn_radius $btn_radius 0;
+        align-items: center;
+        justify-content: center;
+        margin-left: -1px;
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+}
+.btn_primary {
+    background: $primary_color;
+    border:1px solid #80ad5c;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(53, 170, 37, 0.2);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(53, 170, 37, 0.2);
+    box-shadow: 0px 10px 25px 0px rgba(53, 170, 37, 0.2);
+
+}
+.btn_red {
+    background: $btn_red;
+    border:1px solid #c54242;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
+    box-shadow: 0px 10px 25px 0px rgba(170,37,37,0.2);
+   
+}
+.btn_warning {
+    background: $orange_color;
+    border:1px solid #ed853b;
+    -webkit-box-shadow: 0px 10px 25px 0px rgba(196, 94, 26, 0.2);
+    -moz-box-shadow: 0px 10px 25px 0px rgba(196, 94, 26, 0.2);
+    box-shadow: 0px 10px 25px 0px rgba(196, 94, 26, 0.2);
+
 }
